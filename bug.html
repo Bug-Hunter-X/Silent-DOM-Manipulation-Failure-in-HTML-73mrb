@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Uncommon HTML Error</title>
+</head>
+<body>
+  <div id="myDiv">
+    This is some text.
+  </div>
+  <script>
+    // Incorrect way to access element using a variable
+    let myVariable = "myDiv";
+    document.getElementById(myVariable).innerHTML = "Text changed!"; //This will work correctly
+    document.getElementById(myVariable).style.color = "blue"; //This might fail silently in some browsers
+    let element = document.getElementById(myVariable);
+    element.style.color="red"; //This is the correct way to use a variable.
+  </script>
+</body>
+</html>
